@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/sofusalbertsen/silver-octo-pancake
     targetRevision: HEAD
-    path: appss
+    path: apps
   syncPolicy:
     automated:
       prune: true
