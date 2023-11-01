@@ -5,16 +5,18 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    server: https://kubernetes.default.svc
+    name: ''
     namespace: student-0
-  project: default
+    server: 'https://kubernetes.default.svc'
   source:
-    repoURL: https://github.com/eficode-academy/argocd-katas.git  # Update this URL if the helm chart is in a different repo
+    path: quotes-flask/helm/quotes-flask
+    repoURL: 'https://github.com/eficode-academy/argocd-katas.git'
     targetRevision: HEAD
-    path: charts/quotes
     helm:
       valueFiles:
         - values.yaml
+  sources: []
+  project: default
   syncPolicy:
     automated:
       prune: true
